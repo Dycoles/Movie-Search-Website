@@ -40,7 +40,7 @@ function App() {
         {movies.map((movie) => (
           <li key={movie.id} className="p-4 border rounded shadow bg-zinc-700">
             <h2 className="text-xl font-semibold">{movie.title}</h2>
-            <p className="text-gray-400">Rating: {movie.rating}/10</p>
+            <p className="text-gray-400">Rating: {movie.review}/10</p>
           </li>
         )
       )}

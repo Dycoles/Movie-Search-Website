@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   res.send("New API running");
 });
 
-app.get("/movies", async (req, res) => {
+app.get("/api/movies", async (req, res) => {
   try {
     const [rows] = await db.query("SELECT * FROM movies");
     res.json(rows);

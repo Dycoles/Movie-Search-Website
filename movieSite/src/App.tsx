@@ -1,4 +1,5 @@
 import './App.css'
+import MovieList from './components/MovieList';
 import type { Movie } from './types/movie';
 import { useEffect, useState } from 'react';
 
@@ -35,17 +36,7 @@ function App() {
   return (
   <div className="min-h-screen bg-zinc-800 p-8 text-white">
     <h1 className="text-3xl font-bold mb-6">Movies</h1>
-    {movies.length === 0 ? (<p className="text-center">No movies available.</p> ) : (
-      <ul className="space-y-4">
-        {movies.map((movie) => (
-          <li key={movie.id} className="p-4 border rounded shadow bg-zinc-700">
-            <h2 className="text-xl font-semibold">{movie.title}</h2>
-            <p className="text-gray-400">Rating: {movie.review}/10</p>
-          </li>
-        )
-      )}
-      </ul>
-      )}
+      <MovieList movies={movies} />
   </div>
   );
 }

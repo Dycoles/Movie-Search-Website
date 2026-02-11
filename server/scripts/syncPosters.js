@@ -1,3 +1,4 @@
+// This script can be run to trigger the poster sync process 
 const res = await fetch("http://localhost:5000/api/posters/sync", {
   method: "POST",
 });
